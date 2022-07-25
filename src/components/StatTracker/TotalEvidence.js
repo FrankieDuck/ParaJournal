@@ -20,7 +20,7 @@ export default function TotalEvidence() {
     <Card sx={{ minWidth: 475 }} >
       <CardContent>
         <CardActions>
-        <Button size="small" sx={{color: 'black'}}>Total Files: </Button>
+        <Button size="small" sx={{color: 'white'}}>Total Files: </Button>
       </CardActions>
       </CardContent>
     </Card>

@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import TagIcon from '@mui/icons-material/Tag';
 import Divider from '@mui/material/Divider';
+import TwoCardImage from './Icons/TwoCardImage';
 
 const dividerStyles = {
   display: 'flex',
@@ -9,11 +10,6 @@ const dividerStyles = {
   fontSize: 12,
   padding: 10,
 }
-const iconDrawerMoveLeft = {
-  marginLeft: 115,
-  fontSize: 50,
-}
-
 
 const SocialMediaButton = () => {
     const [isHovering, setIsHovering] = useState(false);
@@ -30,15 +26,14 @@ const SocialMediaButton = () => {
       
       <div style={dividerStyles}>
         <Divider/>
-         
+         <button className='side-buttons'>
           <div style={{ backgroundColor: isHovering ? 'black' : '', color: isHovering ? 'red' : '',}}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            >
-             <TagIcon style={iconDrawerMoveLeft}/> 
-          <h1>Previous Investigations</h1>
-              
-            </div>   
+            >Social Media
+             <TwoCardImage /> 
+            </div> 
+          </button>
     </div>
 
     );

@@ -1,6 +1,6 @@
 main {
-    background: rgb(7,61,61);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(7,61,61,1) 100%);
+    background: rgb(7,3,69);
+    background: linear-gradient(90deg, rgba(7,3,69,1) 15%, rgba(62,57,159,1) 51%, rgba(7,3,69,1) 98%);
     color: antiquewhite;
 }
 
@@ -13,7 +13,19 @@ search-bar {
 
 .MuiCardContent-root {
     background: rgb(7,61,61);
-    background: linear-gradient(0deg, rgb(39, 29, 224) 0%, rgb(127, 255, 255) 100%);
-    color: black;
+    background: linear-gradient(0deg, rgb(7,3,69,1) 0%, rgb(62,57,159,1) 100%);
+    color: rgb(255, 255, 255);
     border-radius: 22;
+}
+
+.css-1rp9rvh-MuiPaper-root-MuiAppBar-root {
+    background: linear-gradient(0deg, rgb(7, 5, 36) 0%, rgb(99, 96, 168) 100%);
+}
+
+.side-buttons {
+    cursor: pointer;
+}
+
+.css-12l8nii-MuiDrawer-docked .MuiDrawer-paper {
+    background: linear-gradient(0deg, rgb(7, 5, 36) 0%, rgb(99, 96, 168) 100%);
 }

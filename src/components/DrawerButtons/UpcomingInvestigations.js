@@ -1,7 +1,6 @@
 import {useState} from 'react';
-import AlbumIcon from '@mui/icons-material/Album';
 import Divider from '@mui/material/Divider';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+import TwoCardImage from './Icons/TwoCardImage';
 
 const dividerStyles = {
   display: 'flex',
@@ -10,11 +9,6 @@ const dividerStyles = {
   fontSize: 12,
   padding: 10,
 }
-const iconDrawerMoveLeft = {
-  marginLeft: 125,
-  fontSize: 50,
-}
-
 
 const UpcomingInvestigationButton = () => {
     const [isHovering, setIsHovering] = useState(false);
@@ -30,16 +24,17 @@ const UpcomingInvestigationButton = () => {
     return (
       
       <div style={dividerStyles}>
+        <a href="#upcoming_investigation">
         <Divider/>
-         
+         <button className='side-buttons'>
           <div style={{ backgroundColor: isHovering ? 'black' : '', color: isHovering ? 'red' : '',}}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            >
-             <Brightness7Icon style={iconDrawerMoveLeft}/> 
-          <h1>Upcoming Investigations</h1>
-              
+            >Upcoming Investigations
+             <TwoCardImage /> 
             </div>   
+            </button>
+            </a>
     </div>
 
     );

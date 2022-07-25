@@ -8,13 +8,13 @@ import { CardActionArea } from '@mui/material';
 
 export default function IntroCard() {
   return (
-    <Card sx={{ maxWidth: 1745, display: 'flex', justifyContent: 'space-evenly', marginLeft: 15 }}>
+    <Card sx={{ maxWidth: 1745, display: 'flex', justifyContent: 'space-evenly', marginLeft: 8, marginTop: '24px', }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          image="/Images/journal_image.jpg"
+          alt="ParaJournal"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

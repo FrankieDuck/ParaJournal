@@ -4,15 +4,8 @@ import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import SearchBar from './SearchBar';
 import CurrentInvestigationButton from './DrawerButtons/CurrentInvestigation';
 import PreviousInvestigationButton from './DrawerButtons/PreviousInvestigations';
@@ -20,13 +13,20 @@ import UpcomingInvestigationButton from './DrawerButtons/UpcomingInvestigations'
 import SocialMediaButton from './DrawerButtons/SocialMedia';
 import TopGrid from './StatTracker/TopGrid';
 import IntroCard from './IntroCard';
-import CastleIcon from '@mui/icons-material/Castle';
+import TodoList from './InvestigationRecord/ToDoList';
+import Card from '@mui/material/Card';
+import { CardContent } from '@mui/material';
+import './InvestigationRecord/ToDo.css'
+import UpComingCard from './UpcomingCard/UpComingCard';
+import PreviousCard from './PreviousCard/PreviousCard';
+import TableGraph from './LineChart/TableGraph';
+import BookImage from './DrawerButtons/Icons/BookImage';
 
-const drawerWidth = 240;
+const drawerWidth = 150;
 
 export default function PermDrawer() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -34,7 +34,7 @@ export default function PermDrawer() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Permanent drawer
+            ParaJournal
           </Typography>
           <SearchBar />
         </Toolbar>
@@ -52,7 +52,7 @@ export default function PermDrawer() {
         anchor="left"
       >
         <Toolbar />
-        <CastleIcon style={{ marginRight: 70, fontSize: 100, paddingTop: 15  }}/>
+        <BookImage />
         <Divider />
                     <CurrentInvestigationButton/>
                 <Divider />
@@ -61,6 +61,7 @@ export default function PermDrawer() {
                     <UpcomingInvestigationButton/>
                 <Divider />
                     <SocialMediaButton/>
+                  <Divider/>
       </Drawer>
       <Box
         component="main"
@@ -69,6 +70,19 @@ export default function PermDrawer() {
         <Toolbar />
             <TopGrid />
             <IntroCard/>
+            <br></br>
+
+            <Card >
+              <CardContent >
+                <TodoList />
+                <TableGraph />
+              </CardContent>
+            </Card >
+
+            <UpComingCard />
+            <PreviousCard />
+            <Divider/>
+
       </Box>
     </Box>
   );

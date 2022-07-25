@@ -1,6 +1,11 @@
 import {useState} from 'react';
-import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import Divider from '@mui/material/Divider';
+import SoloCardImage from './Icons/SingleCardIcon';
+
+const goToCurrentInvestigation = () => {
+   const currentElement = document.getElementById("current_investigation")
+   currentElement.scrollIntoView({behavior: "smooth"})
+} 
 
 const dividerStyles = {
   display: 'flex',
@@ -9,11 +14,6 @@ const dividerStyles = {
   fontSize: 12,
   padding: 10,
 }
-const iconDrawerMoveLeft = {
-  marginLeft: 100,
-  fontSize: 50,
-}
-
 
 
 const CurrentInvestigationButton = () => {
@@ -31,15 +31,14 @@ const CurrentInvestigationButton = () => {
       
       <div style={dividerStyles}>
         <Divider/>
-         
+         <button className='side-buttons' onClick={() => goToCurrentInvestigation()}>
           <div style={{ backgroundColor: isHovering ? 'black' : '', color: isHovering ? 'red' : '',}}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            >
-             <NightlightRoundIcon style={iconDrawerMoveLeft}/> 
-          <h1>Current Investigation</h1>
-              
+            >Current Investigation
+             <SoloCardImage/> 
             </div>   
+            </button>
     </div>
 
     );

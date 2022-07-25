@@ -20,7 +20,7 @@ export default function StorageRemaining() {
     <Card sx={{ minWidth: 475 }} >
       <CardContent>
         <CardActions>
-        <Button size="small" sx={{color: 'black'}}>Storage Remaining: </Button>
+        <Button size="small" sx={{color: 'white'}}>Storage Remaining: </Button>
       </CardActions>
       </CardContent>
     </Card>

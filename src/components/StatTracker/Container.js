@@ -9,7 +9,7 @@ export default function SimpleContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
-        <Container style={{ display: 'flex', minWidth: 1745, justifyContent: 'space-evenly' }}>
+        <Container style={{ display: 'flex', minWidth: 1745, justifyContent: 'space-evenly', marginTop: '56px',  }}>
             <Box sx={{ bgcolor: '#cfe8fc', height: '10vh',}} />
                 <TotalEvidence/>
                 <StorageRemaining/>
